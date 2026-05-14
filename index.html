@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>AI TOEFL Simulator</title>
+  <meta name="description" content="Simulasi tes TOEFL online gratis. Latihan Listening, Structure, dan Reading dengan analisis AI." />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="app-header">
+  <div class="header-inner">
+    <div class="header-badge">Academic English Preparation</div>
+      
+    <h1 class="app-title">
+      AI TOEFL SIMULATOR<span>-</span>GRATIS
+    </h1>
+
+    <p class="app-subtitle">
+      Simulasi tes TOEFL online — latihan Listening, Structure, dan Reading dengan analisis performa berbasis AI.
+    </p>
+
+    <span class="app-author">Built with AI</span>
+  </div>
+
+  </header>
+
+  <main class="container">
+
+    <section class="intro-card">
+      <div class="intro-left">
+        <h2>Choose Practice Mode</h2>
+        <p>
+          Practice TOEFL ITP-like Listening, Structure, and Reading questions with AI-powered analysis.
+          Choose a single section for focused practice or launch a full test simulation.
+        </p>
+      </div>
+
+      <div class="section-buttons">
+        <button id="btn-nav-listening" onclick="handleMainNavClick('listening')">
+          🎧 Listening
+        </button>
+
+        <button id="btn-nav-structure" onclick="handleMainNavClick('structure')">
+          ✍️ Structure
+        </button>
+
+        <button id="btn-nav-reading" onclick="handleMainNavClick('reading')">
+          📖 Reading
+        </button>
+
+        <button id="btn-nav-fulltest" class="btn-full-test" onclick="handleMainNavClick('fulltest')">
+          🚀 Start Full Test
+        </button>
+      </div>
+    </section>
+
+    <div class="home-three-column">
+
+      <section class="test-info color-block-sets">
+        <h2>Available Practice Sets</h2>
+
+        <div class="vertical-info-list">
+
+          <div class="info-box">
+            <h3>Set 1</h3>
+            <p><strong>Beginner Quick Practice</strong></p>
+
+            <div class="stat-row">
+              <span class="stat-pill">10 Listening</span>
+              <span class="stat-pill">10 Structure</span>
+              <span class="stat-pill">10 Reading</span>
+            </div>
+          </div>
+
+          <div class="info-box">
+            <h3>Set 2</h3>
+            <p><strong>Medium Practice</strong></p>
+
+            <div class="stat-row">
+              <span class="stat-pill">20 Listening</span>
+              <span class="stat-pill">20 Structure</span>
+              <span class="stat-pill">20 Reading</span>
+            </div>
+          </div>
+
+          <div class="info-box">
+            <h3>Set 3</h3>
+            <p><strong>Advanced Long Practice</strong></p>
+
+            <div class="stat-row">
+              <span class="stat-pill">30 Listening</span>
+              <span class="stat-pill">30 Structure</span>
+              <span class="stat-pill">30 Reading</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <div class="home-center-column">
+
+        <section class="test-info color-block-reference">
+          <h2>TOEFL ITP-like Format Reference</h2>
+
+          <div class="vertical-info-list">
+
+            <div class="info-box">
+              <h3>🎧 Listening</h3>
+              <p>50 questions · 35 minutes</p>
+              <p>
+                Short conversations, longer conversations, and short academic talks.
+              </p>
+            </div>
+
+            <div class="info-box">
+              <h3>✍️ Structure</h3>
+              <p>40 questions · 25 minutes</p>
+              <p>
+                Sentence completion and error identification.
+              </p>
+            </div>
+
+            <div class="info-box">
+              <h3>📖 Reading</h3>
+              <p>50 questions · 55 minutes</p>
+              <p>
+                Academic passages with main idea, detail, inference, vocabulary, and reference questions.
+              </p>
+            </div>
+
+          </div>
+        </section>
+
+        <section id="practice-area" class="practice-area color-block-practice">
+          <h2>Practice Area</h2>
+
+          <p>
+            Choose <strong>Listening</strong>, <strong>Structure</strong>,
+            <strong>Reading</strong>, or <strong>Start Full Test</strong> above.
+          </p>
+
+          <p class="practice-note">
+            For section practice, select Set 1, 2, or 3.
+            For full simulation, choose Set 0 Mixed or a regular set.
+          </p>
+
+          <!-- AI Features Info -->
+          <div style="margin-top: 20px; padding: 16px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-radius: 12px; border: 1px solid rgba(102, 126, 234, 0.3);">
+            <h3 style="color: #667eea; margin-top: 0;">🤖 Fitur AI yang Tersedia</h3>
+            <ul style="color: #e0e0e0; list-style: none; padding: 0;">
+              <li style="padding: 6px 0;">✅ Penjelasan otomatis per soal</li>
+              <li style="padding: 6px 0;">✅ Analisis performa & rekomendasi</li>
+              <li style="padding: 6px 0;">✅ Generate soal baru dengan AI</li>
+              <li style="padding: 6px 0;">✅ AI-powered scoring</li>
+            </ul>
+          </div>
+        </section>
+
+      </div>
+
+      <section class="test-info color-block-fulltest">
+        <h2>Full Test Mode</h2>
+
+        <div class="vertical-info-list">
+
+          <div class="info-box">
+            <h3>Set 0 — Mixed Full Test</h3>
+            <p>
+              Random full TOEFL ITP-like simulation from all active practice sets.
+            </p>
+
+            <div class="stat-row">
+              <span class="stat-pill">50 L</span>
+              <span class="stat-pill">40 S</span>
+              <span class="stat-pill">50 R</span>
+            </div>
+          </div>
+
+          <div class="info-box">
+            <h3>Regular Full Test</h3>
+            <p>
+              Start a full test using Set 1, Set 2, or Set 3 only.
+            </p>
+
+            <p class="flow-text">
+              <strong>Flow:</strong> Listening → Structure → Reading → Final Result
+            </p>
+          </div>
+
+          <div class="info-box">
+            <h3>AI-Powered Analysis</h3>
+            <p>
+              After completing a test, get detailed AI analysis of your performance with personalized study recommendations.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <footer class="app-footer">
+    <p>
+      AI TOEFL Simulator — Practice smarter with AI
+    </p>
+
+    <p class="footer-contact">
+      Project:
+      <a href="https://github.com" target="_blank">GitHub Repository</a>
+    </p>
+  </footer>
+
+  <script>
+    function scrollToPracticeArea() {
+      const practiceArea = document.getElementById("practice-area");
+
+      if (!practiceArea) {
+        return;
+      }
+
+      setTimeout(function () {
+        practiceArea.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }, 150);
+    }
+
+    function handleMainNavClick(mode) {
+      if (mode === "fulltest") {
+        loadFullTestIntro();
+      } else {
+        loadSection(mode);
+      }
+
+      scrollToPracticeArea();
+    }
+  </script>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
